@@ -1,11 +1,9 @@
 import './reset.css'
 import './App.css'
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Search from './components/Search'
 import Entries from './components/Entries'
-import EntryDetail from './components/EntryDetail'
 
 function App() {
   const [allPokemon, setPokemon] = useState([])
@@ -26,17 +24,15 @@ function App() {
   }
 
   return (
-    <Router>
-      <div className='App'>
-        <Header />
-        <div className='container search'>
-          <Search />
-        </div>
-        <div className='container pokemon-entries'>
-          <Entries allPokemon={allPokemon} />
-        </div>
+    <div className='App'>
+      <Header />
+      <div className='container search'>
+        <Search />
       </div>
-    </Router>
+      <div className='container pokemon-entries'>
+        <Entries allPokemon={allPokemon} />
+      </div>
+    </div>
   )
 }
 

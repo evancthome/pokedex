@@ -111,6 +111,7 @@ header .container {
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .pokemon-entry:hover {

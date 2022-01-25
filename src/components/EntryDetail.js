@@ -1,5 +1,14 @@
+import { useParams, Link } from 'react-router-dom'
+
 function EntryDetail() {
-  return <h1>Detail</h1>
+  const { name } = useParams()
+
+  return (
+    <>
+      <h1>{name}</h1>
+      <Link to='/'>Back</Link>
+    </>
+  )
 }
 
 export default EntryDetail
