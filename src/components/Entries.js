@@ -4,7 +4,7 @@ function Entries({ allPokemon }) {
   return (
     <>
       {allPokemon.map((pokemon, i) => (
-        <Entry key={i.toString()} pokemon={pokemon} i={i} />
+        <Entry key={(i + 1).toString()} pokemon={pokemon} i={i + 1} />
       ))}
     </>
   )

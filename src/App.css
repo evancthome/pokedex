@@ -149,3 +149,24 @@ header .container {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/* Pokemon detail */
+
+.detail header {
+  background: var(--clr-primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail img {
+  width: 20rem;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.detail a {
+  text-decoration: none;
+  margin: 1rem;
+}
