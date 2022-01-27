@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
-function EntryDetail(props) {
+function EntryDetail() {
   const [pokemonData, setData] = useState({})
   const { name } = useParams()
 

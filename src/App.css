@@ -12,6 +12,7 @@ body {
   font-family: var(--ff-primary);
   color: var(--clr-dark);
   background-color: var(--clr-light);
+  overflow-x: hidden;
 }
 /* Utils */
 .container {
@@ -74,12 +75,6 @@ header .container {
   width: 100%;
   border: var(--clr-dark 2px solid);
   border-radius: 0.5rem;
-}
-
-.btn-search {
-  width: 100%;
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
 @media (min-width: 29.625em) {

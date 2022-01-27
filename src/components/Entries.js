@@ -1,11 +1,19 @@
 import Entry from './Entry'
 
-function Entries({ allPokemon }) {
+function Entries({ allPokemon, query }) {
   return (
     <>
-      {allPokemon.map((pokemon, i) => (
-        <Entry key={(i + 1).toString()} pokemon={pokemon} i={i + 1} />
-      ))}
+      {allPokemon
+        .filter((pokemon) => {
+          if (pokemon === '') {
+            return pokemon
+          } else if (pokemon.name.toLowerCase().includes(query.toLowerCase())) {
+            return pokemon
+          }
+        })
+        .map((pokemon, i) => (
+          <Entry key={(i + 1).toString()} pokemon={pokemon} i={i + 1} />
+        ))}
     </>
   )
 }
