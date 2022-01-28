@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-  --clr-primary: hsl(2, 81%, 41%);
+  --clr-primary: #bd1a14;
   --clr-dark: #222;
   --clr-light: #ededed;
 
@@ -23,9 +23,9 @@ body {
 
 .btn {
   background-color: var(--clr-primary);
-  border: var(--clr-dark) 1px solid;
+  /* border: var(--clr-dark) 1px solid; */
   border-radius: 0.5rem;
-  padding: 0.25em 0.5rem;
+  padding: 0.3em 0.75rem;
   cursor: pointer;
   color: white;
 }
@@ -98,7 +98,7 @@ header .container {
 }
 
 .pokemon-entry {
-  background: rgba(237, 237, 237, 0.9);
+  background: #f5f5f5;
   border: var(--clr-dark) 2px solid;
   border-radius: 0.5em;
   padding: 0 0 0.25em 0;
@@ -146,7 +146,6 @@ header .container {
 }
 
 /* Pokemon detail */
-
 .detail header {
   background: var(--clr-primary);
   color: white;
@@ -163,5 +162,68 @@ header .container {
 
 .detail a {
   text-decoration: none;
+  position: relative;
+  top: 1em;
+  left: 1em;
+}
+
+.entry-card {
+  background: white;
+  width: min(100vw - 5rem, 40rem);
+  margin: 0 auto;
+  border: var(--clr-dark) 2px solid;
+  border-radius: 0.3rem;
+  padding: 1rem 4rem;
+}
+
+.entry-card h1 {
+  text-align: center;
+}
+
+.entry-card .upper-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 auto;
+  align-items: center;
+}
+
+@media (min-width: 42.5rem) {
+  .entry-card .upper-data {
+    flex-direction: row;
+  }
+}
+
+.entry-card .upper-data p {
+  font-size: 1.3rem;
+}
+
+.entry-card .types {
+  display: flex;
+  justify-content: center;
+}
+
+.entry-card .type {
+  padding: 0.5em 1em;
+  border-radius: 20%/50%;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  margin-inline: 0.5rem;
+}
+
+.entry-card .stats {
   margin: 1rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 5rem;
+}
+
+@media (min-width: 29.8125rem) {
+  .entry-card .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
