@@ -114,7 +114,7 @@ header .container {
   background: white;
 }
 
-.pokemon-entry > h3 {
+.pokemon-entry h3 {
   text-align: center;
   background-color: var(--clr-primary);
   color: white;
@@ -210,7 +210,11 @@ header .container {
   color: white;
   font-weight: 600;
   text-align: center;
-  margin-inline: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.entry-card h2 {
+  text-align: center;
 }
 
 .entry-card .stats {

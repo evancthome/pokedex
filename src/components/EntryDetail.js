@@ -53,7 +53,6 @@ function EntryDetail() {
               src={require(`../pokemonsprites/${pokemonData.id}.png`)}
               alt={name}
             />
-            <p></p>
             <div className='types'>
               {pokemonData.types.map((t) => (
                 <Type key={t.type.name} t={t.type.name} />
@@ -63,9 +62,10 @@ function EntryDetail() {
                 // <p key={t.type.name}>type: {t.type.name}</p>
               ))}
             </div>
+            <h2>Stats:</h2>
             <div className='stats'>
               {pokemonData.stats.map((s) => (
-                <div className='stat'>
+                <div key={s.stat.name} className='stat'>
                   <h3>{s.stat.name[0].toUpperCase() + s.stat.name.slice(1)}</h3>
                   <CircularProgressbar
                     value={s.base_stat}
