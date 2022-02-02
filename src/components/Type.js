@@ -50,8 +50,6 @@ function Type({ t }) {
       bgColor = 'black'
   }
 
-  console.log(bgColor)
-
   return (
     <div style={{ backgroundColor: bgColor }} className='type'>
       {t.toUpperCase()}
