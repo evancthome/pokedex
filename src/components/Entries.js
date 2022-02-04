@@ -10,6 +10,7 @@ function Entries({ allPokemon, query }) {
           } else if (pokemon.name.toLowerCase().includes(query.toLowerCase())) {
             return pokemon
           }
+          return null
         })
         .map((pokemon, i) => (
           <Entry key={(i + 1).toString()} pokemon={pokemon} i={i + 1} />
